@@ -47,5 +47,4 @@ Navigate to the client directory and start it.
 cd client
 pnpm dev
 ```
-Your Next.js application should now be running at http://localhost:3000.
 
