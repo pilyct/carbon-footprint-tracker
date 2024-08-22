@@ -12,10 +12,10 @@ export default function Page() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[#023a46]">
-      <Navbar /> {/* Include the Navbar component */}
+      <Navbar /> 
       <div className="flex-grow flex flex-col justify-center p-6">
         <div className="mt-4 flex flex-col gap-6 md:flex-row">
-          {/* Image Section */}
+          
           <div className="flex justify-center md:w-[60%] md:order-1 order-1">
             <Image
               src="/sustainability.jpg"
@@ -26,7 +26,7 @@ export default function Page() {
             />
           </div>
 
-          {/* Form Section */}
+          
           <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-12 md:w-[30%] md:px-16 md:order-2 order-2 min-h-[60vh]">
             <p className="antialiased text-xl text-gray-800 md:text-3xl md:leading-normal text-center md:text-left">
               Welcome to <strong>Carbon Footprint Tracker</strong>
