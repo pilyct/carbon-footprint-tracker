@@ -1,21 +1,25 @@
 import express from 'express';
 import cors from 'cors';
 import router from './router';
-import { dbConnect } from './models/database.config';
+import { connectDB } from './models/database.config';
+import dotenv from 'dotenv';
+
+dotenv.config();
+connectDB();
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 3000;
 
 
 app.use(cors());
 app.use(express.json());
 app.use(router);
 
+
 app.get('/', (req, res) => {
-  res.send('Halli hallo, here TypeScript with Node.js and Express!');
+  res.send('Halli hallo, welcome to our CFT Server!');
 });
 
-dbConnect();
 
 app.listen(port, () => {
   console.log(`🌐 Server is running on http://localhost:${port} 🌐 `);

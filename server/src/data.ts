@@ -1,21 +1,5 @@
 import { FoodItem } from './models/food.model.js';
-import { User } from './models/user.model.js';
-
-// Define the interface for a food item with additional attributes
-// interface FoodItem {
-//   id: number;
-//   name: string;
-//   category: 'Fruit' | 'Vegetable' | 'Meat' | 'Dairy' | 'Grain' | 'Other';
-//   quantity: number; // Quantity in grams
-//   carbonFootprint: number; // Carbon footprint in grams of CO2 per 100 grams
-//   calories?: number; // Calories per 100 grams
-//   protein?: number; // Protein in grams per 100 grams
-//   fat?: number; // Fat in grams per 100 grams
-//   carbohydrates?: number; // Carbohydrates in grams per 100 grams
-//   seasonality?: 'Seasonal' | 'Non-seasonal'; // Availability
-//   origin?: string; // Country or region of origin
-//   price?: number; // Price per 100 grams
-// }
+import { IUser } from './models/user.model.js';
 
 // Define a sample data array of food items with additional attributes
 const foodData: FoodItem[] = [
@@ -42,15 +26,13 @@ const foodData: FoodItem[] = [
 ];
 
 // Define the sample data for users
-export const userSeedData: User[] = [
+export const userSeedData: IUser[] = [
   {
-    id: '1',
     name: 'John Doe',
     email: 'john.doe@email.com',
     password: '1234',
   },
   {
-    id: '2',
     name: 'Jane Smith',
     email: 'jane.smith@email.com',
     password: '1234',

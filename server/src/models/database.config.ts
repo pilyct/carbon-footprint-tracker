@@ -3,7 +3,7 @@ dotenv.config();
 
 import { connect } from 'mongoose';
 
-export const dbConnect = async () => {
+export const connectDB = async () => {
   const mongoUri = process.env.MONGO_URI;
 
   if (!mongoUri) {
@@ -11,7 +11,9 @@ export const dbConnect = async () => {
   }
 
   try {
-      await connect(mongoUri);
+      await connect(mongoUri as string, {
+        dbName: 'cft-database', // database name to avoid automatic "test" name is MongoDB
+      });
       console.log('📚 Database connected successfully!');
   } catch (error) {
       console.error('🐞 Error connecting to database: ', error);
