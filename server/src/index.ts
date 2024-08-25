@@ -16,9 +16,9 @@ app.use(express.json());
 app.use(router);
 
 
-app.get('/', (req, res) => {
-  res.send('Halli hallo, welcome to our CFT Server!');
-});
+// app.get('/', (req, res) => {
+//   res.send('Halli hallo, welcome to our CFT Server!');
+// });
 
 
 app.listen(port, () => {
