@@ -36,7 +36,7 @@ Navigate to the server directory and start it.
 
 ```bash
 cd server
-pnpm start
+pnpm dev
 ```
 
 Run the client:
