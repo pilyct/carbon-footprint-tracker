@@ -63,8 +63,25 @@ const login = async (req: Request, res: Response) => {
 
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Internal server error: ', error });
+    res.status(500).json({ message: 'Server error when trying to Login: ', error });
   }
+}
+
+// --------- LOGOUT
+const logout = async (req: Request, res: Response) => {
+  try {
+    console.log('Logout request received');
+    // Optional: If you are maintaining a blacklist of tokens, you could add logic here
+    // For example, you might add the token to a blacklist database or in-memory store
+
+    // Since JWTs are stateless, you don't need to invalidate them server-side explicitly.
+    // Just inform the client to remove the token.
+
+    res.status(200).json({ message: 'Logged out successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error when trying to Logout', error });
+  }
+
 }
 
 
@@ -72,6 +89,7 @@ const login = async (req: Request, res: Response) => {
 export {
   register,
   login,
+  logout,
 };
 
   
