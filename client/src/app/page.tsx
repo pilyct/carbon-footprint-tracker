@@ -23,14 +23,15 @@ export default function Page() {
               height={880}
               className="w-full h-auto md:w-[90%] md:h-auto md:block"
               alt="Woman carrying a plant"
+              priority={true}
             />
           </div>
 
           
           <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-12 md:w-[30%] md:px-16 md:order-2 order-2 min-h-[60vh]">
-            <p className="antialiased text-xl text-gray-800 md:text-3xl md:leading-normal text-center md:text-left">
+            {/* <p className="antialiased text-xl text-gray-800 md:text-3xl md:leading-normal text-center md:text-left">
               Welcome to <strong>Carbon Footprint Tracker</strong>
-            </p>
+            </p> */}
 
             {isLogin ? <LoginForm /> : <RegisterForm />}
 
